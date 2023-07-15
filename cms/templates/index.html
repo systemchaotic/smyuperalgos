@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management System</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Content Management System</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Latest Posts</h2>
+            {% for post in posts %}
+                <article>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.content }}</p>
+                </article>
+            {% endfor %}
+        </section>
+    </main>
+    <footer>
+        <p>© 2022 Content Management System. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
